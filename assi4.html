@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <style>
+        #capital {
+            display: block;
+        }
+        #hideBtn, #showBtn, #toggleBtn {
+            cursor: pointer;
+        }
+        #first-paragraph:hover {
+            background-color: yellow;
+        }
+        #second-paragraph {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Country:</h2>
+        <p>CANADA</p>
+        <h2>Capital:</h2>
+        <p id="capital">OTTAWA</p>
+        <button id="hideBtn" onclick="hideCapital()">Hide capital name</button>
+        <button id="showBtn" onclick="showCapital()">Show capital name</button>
+        <button id="toggleBtn" onclick="toggleCapital()">Toggle</button>
+    </div>
+    <div>
+        <h3>Hover on this paragraph for Yellow</h3>
+        <p id="first-paragraph">Hover over me!</p>
+        <h3>Click on this paragraph for Green example.</h3>
+        <p id="second-paragraph" onclick="changeBackgroundColor()">Click me!</p>
+    </div>
+
+    <script>
+        function hideCapital() {
+            document.getElementById("capital").style.display = "none";
+        }
+
+        function showCapital() {
+            document.getElementById("capital").style.display = "block";
+        }
+
+        function toggleCapital() {
+            var capital = document.getElementById("capital");
+            capital.style.display = capital.style.display === "none" ? "block" : "none";
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>
